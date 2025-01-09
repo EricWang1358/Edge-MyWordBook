@@ -1,20 +1,27 @@
 {
-  "name": "edge-mywordbook",
-  "version": "1.0.0",
-  "description": "Edge-MyWordBook",
-  "homepage": "https://github.com/EricWang1358/Edge-MyWordBook#readme",
-  "bugs": {
-    "url": "https://github.com/EricWang1358/Edge-MyWordBook/issues"
+  "manifest_version": 3,
+  "name": "Word Saver",
+  "version": "1.0",
+  "description": "Save selected words to Excel",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EricWang1358/Edge-MyWordBook.git"
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
-  "license": "ISC",
-  "author": "EricWang1358",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "xlsx.full.min.js"]
+    }
+  ]
 }
