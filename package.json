@@ -1,0 +1,20 @@
+{
+  "name": "edge-mywordbook",
+  "version": "1.0.0",
+  "description": "Edge-MyWordBook",
+  "homepage": "https://github.com/EricWang1358/Edge-MyWordBook#readme",
+  "bugs": {
+    "url": "https://github.com/EricWang1358/Edge-MyWordBook/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricWang1358/Edge-MyWordBook.git"
+  },
+  "license": "ISC",
+  "author": "EricWang1358",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
